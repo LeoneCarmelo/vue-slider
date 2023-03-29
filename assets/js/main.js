@@ -44,7 +44,7 @@ createApp({
         },
         //increment function
         down() {
-            if (this.activeImage === this.images.length) {
+            if (this.activeImage === this.images.length - 1) {
                 this.activeImage = 0
             } else {
                 this.activeImage++
