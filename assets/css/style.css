@@ -1,0 +1,50 @@
+.container {
+    width:1000px;
+    position:relative;
+}
+
+.container > img {
+    height:400px;
+    width: inherit;
+    display:block;
+    height:500px;
+    margin:auto;
+    object-fit: cover;
+}
+
+.thumbnails {
+    width:200px;
+    height: 100%;
+    position:absolute;
+    right:0;
+    top:0;
+    background-color: black;
+}
+
+.thumbnails > img {
+    width:100%;
+    height: calc(100% / 5);
+    display: block;
+    background-size: cover;
+    background-position: center;
+}
+
+button {
+    position: absolute;
+    border-radius: 50%;
+    left:45%;
+    border: 0;
+    background-color: rgb(245, 212, 0);
+    color: black;
+    transition: background-color 0.5s, color 0.5s;
+    margin: 5px 0;
+}
+
+button:nth-child(2) {
+    bottom: 0;
+}
+
+button:hover {
+    background-color: black;
+    color: rgb(245, 212, 0);
+}
