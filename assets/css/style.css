@@ -33,6 +33,9 @@
     background-position: center;
 }
 
+.thumbnails > img:not(.selected) {
+    opacity: 0.5;
+}
 button {
     position: absolute;
     border-radius: 50%;
@@ -42,6 +45,7 @@ button {
     color: black;
     transition: background-color 0.5s, color 0.5s;
     margin: 5px 0;
+    z-index: 1;
 }
 
 button:nth-child(2) {

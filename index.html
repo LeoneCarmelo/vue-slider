@@ -16,7 +16,7 @@
             <div class="thumbnails">
                 <button @click="up"><i class="fa fa-angle-up fw-bolder" aria-hidden="true"></i></button>
                 <button @click="down"><i class="fa fa-angle-down fw-bolder" aria-hidden="true"></i></button>
-                <img :src="item.image" alt="" v-for="item in images">
+                <img :src="item.image" alt="" v-for="(item,index) in images" :class="index === activeImage ? 'selected' : ''">
             </div>
         </div>
     </div>
