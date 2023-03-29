@@ -12,11 +12,16 @@
 <body>
     <div id="app">
         <div class="container mt-4">
+            <!-- Title -->
+            <span class="title" v-for="(item, index) in images" :class="index === activeImage ? 'visible' : ''">{{ images[activeImage].title }}</span>
+            <!-- Text -->
+            <p class="text bottom-0" v-for="item in images" :class="index === activeImage ? 'visible' : ''">{{ images[activeImage].text }}</p>
+            <!-- Images -->
             <img class="img-fluid" :src="images[activeImage].image" alt="" :class="index === activeImage ? 'visible' : ''" v-for="(item, index) in images">
             <div class="thumbnails">
                 <button @click="up"><i class="fa fa-angle-up fw-bolder" aria-hidden="true"></i></button>
                 <button @click="down"><i class="fa fa-angle-down fw-bolder" aria-hidden="true"></i></button>
-                <img :src="item.image" alt="" v-for="(item,index) in images" :class="index === activeImage ? 'selected' : ''">
+                <img @click="show" :src="item.image" alt="" v-for="(item,index) in images" :class="index === activeImage ? 'selected' : ''">
             </div>
         </div>
     </div>

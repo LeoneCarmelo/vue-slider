@@ -49,6 +49,10 @@ createApp({
             } else {
                 this.activeImage++
             }
+        },
+        show() {
+            console.log(this.images)
+            
         }
     }
 }).mount('#app')
