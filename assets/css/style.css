@@ -12,8 +12,12 @@
     object-fit: cover;
 }
 
+.container > img:not(.visible) {
+    display: none;
+}
+
 .thumbnails {
-    width:200px;
+    width:170px;
     height: 100%;
     position:absolute;
     right:0;

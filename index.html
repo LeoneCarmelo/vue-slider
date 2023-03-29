@@ -12,10 +12,10 @@
 <body>
     <div id="app">
         <div class="container mt-4">
-            <img class="img-fluid" :src="images[0].image" alt="">
+            <img class="img-fluid" :src="images[activeImage].image" alt="" :class="index === activeImage ? 'visible' : ''" v-for="(item, index) in images">
             <div class="thumbnails">
-                <button><i class="fa fa-angle-up fw-bolder" aria-hidden="true"></i></button>
-                <button><i class="fa fa-angle-down fw-bolder" aria-hidden="true"></i></button>
+                <button @click="up"><i class="fa fa-angle-up fw-bolder" aria-hidden="true"></i></button>
+                <button @click="down"><i class="fa fa-angle-down fw-bolder" aria-hidden="true"></i></button>
                 <img :src="item.image" alt="" v-for="item in images">
             </div>
         </div>
