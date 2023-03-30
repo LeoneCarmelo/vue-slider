@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            time: null,
             activeImage: 0,
             images: [
                 {
@@ -50,9 +51,17 @@ createApp({
                 this.activeImage++
             }
         },
-        show() {
-            console.log(this.images)
-            
-        }
+        changeImage(index) {
+            this.activeImage = index
+        },
+        startAutoplay() {
+            this.time = setInterval(this.down, 3000)
+        },
+        stopAutoplay() {
+            clearInterval(this.time)
+        },
+    },
+    mounted() {
+        this.startAutoplay()
     }
 }).mount('#app')
