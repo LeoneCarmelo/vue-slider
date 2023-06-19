@@ -1,21 +1,25 @@
+#app {
+    background-color: cadetblue;
+}
 .container {
-    width:1000px;
     position:relative;
+    box-shadow: 0 0 20px 5px black;
 }
 
 .container > img {
-    height:400px;
     width: inherit;
     display:block;
-    height:500px;
+    height:770px;
     margin:auto;
     object-fit: cover;
+    object-position: right;
 }
 
 .title, .text {
     position: absolute;
     color:white;
     z-index: 1;
+    font-size: 1.2rem;
 }
 
 
@@ -38,6 +42,7 @@
     display: block;
     background-size: cover;
     background-position: center;
+    object-fit: cover;
 }
 
 .thumbnails > img:not(.selected) {
